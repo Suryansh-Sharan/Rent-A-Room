@@ -1,0 +1,134 @@
+
+.env
+.env.*
+*.pem
+*.key
+*.p12
+pass.txt
+secrets/
+
+
+# Virtual environments
+backend/.venv/
+backend/venv/
+backend/env/
+backend/.env/
+
+# Python cache
+backend/**/__pycache__/
+backend/**/*.py[cod]
+backend/**/*.pyo
+backend/**/*.pyd
+backend/**/*.pyc
+backend/.Python
+
+# Distribution / packaging
+backend/build/
+backend/dist/
+backend/*.egg-info/
+backend/.eggs/
+backend/pip-wheel-metadata/
+backend/MANIFEST
+
+# Test artifacts
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/coverage.xml
+backend/*.cover
+
+# Type stubs / mypy
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+
+# pyright
+backend/pyrightconfig.json
+
+# Logs
+backend/**/*.log
+backend/logs/
+
+# SQLite (local dev only)
+backend/*.db
+backend/*.sqlite3
+
+# Jupyter notebooks checkpoints
+backend/**/.ipynb_checkpoints/
+
+# Dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+frontend/.yarn/install-state.gz
+
+# Next.js build output
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Production
+frontend/dist/
+
+# Debug logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.pnpm-debug.log*
+
+# Type checking
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+# Testing
+frontend/coverage/
+frontend/.nyc_output/
+
+# Storybook
+frontend/.storybook/
+frontend/storybook-static/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains IDEs (PyCharm, WebStorm…)
+.idea/
+*.iml
+*.iws
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+docker-compose.override.yml
+.dockerignore
+
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# AI / tool artefacts
+.gemini/

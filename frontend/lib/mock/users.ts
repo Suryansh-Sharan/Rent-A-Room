@@ -1,0 +1,171 @@
+export type UserRole = 'tenant' | 'owner' | 'admin';
+export type UserStatus = 'active' | 'suspended' | 'pending';
+
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  avatar: string;
+  role: UserRole;
+  status: UserStatus;
+  phone: string;
+  location: string;
+  joinedDate: string;
+  bio: string;
+  rating?: number;
+  verified: boolean;
+  preferences?: string[];
+  totalListings?: number;
+  totalRequests?: number;
+}
+
+export const mockUsers: User[] = [
+  {
+    id: 'u1',
+    name: 'Aryan Singh',
+    email: 'aryan@example.com',
+    avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
+    role: 'tenant',
+    status: 'active',
+    phone: '+91 98765 43210',
+    location: 'Bangalore',
+    joinedDate: '2026-01-10',
+    bio: 'Software engineer at a leading tech firm. Love reading, hiking, and clean workspaces. Vegetarian and non-smoker.',
+    verified: true,
+    preferences: ['WiFi', 'Study Friendly', 'Quiet Area', 'Near Metro', 'Non Smoking', 'Vegetarian'],
+    totalRequests: 4,
+  },
+  {
+    id: 'u2',
+    name: 'Rajesh Malhotra',
+    email: 'rajesh@example.com',
+    avatar: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg',
+    role: 'owner',
+    status: 'active',
+    phone: '+91 99887 76655',
+    location: 'Mumbai',
+    joinedDate: '2025-09-05',
+    bio: 'Property investor with 12+ years of experience. I maintain all properties to the highest standard.',
+    rating: 4.8,
+    verified: true,
+    totalListings: 5,
+  },
+  {
+    id: 'u3',
+    name: 'Priya Sharma',
+    email: 'priya@example.com',
+    avatar: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg',
+    role: 'owner',
+    status: 'active',
+    phone: '+91 87654 32109',
+    location: 'Bangalore',
+    joinedDate: '2025-11-15',
+    bio: 'I own a few well-maintained apartments in Bangalore. Always available for tenant queries.',
+    rating: 4.6,
+    verified: true,
+    totalListings: 3,
+  },
+  {
+    id: 'u4',
+    name: 'Arjun Kapoor',
+    email: 'arjun@example.com',
+    avatar: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg',
+    role: 'owner',
+    status: 'active',
+    phone: '+91 76543 21098',
+    location: 'Mumbai',
+    joinedDate: '2025-08-20',
+    bio: 'Luxury real estate owner. My properties come with premium amenities and exceptional views.',
+    rating: 4.9,
+    verified: true,
+    totalListings: 8,
+  },
+  {
+    id: 'u5',
+    name: 'Sunita Verma',
+    email: 'sunita@example.com',
+    avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg',
+    role: 'owner',
+    status: 'active',
+    phone: '+91 65432 10987',
+    location: 'Delhi',
+    joinedDate: '2026-02-01',
+    bio: 'Retired professor renting out a portion of my home. Preference for students and researchers.',
+    rating: 4.5,
+    verified: true,
+    totalListings: 2,
+  },
+  {
+    id: 'u6',
+    name: 'Karan Mehta',
+    email: 'karan@example.com',
+    avatar: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg',
+    role: 'owner',
+    status: 'active',
+    phone: '+91 54321 09876',
+    location: 'Bangalore',
+    joinedDate: '2026-03-12',
+    bio: 'Co-living enthusiast building premium shared spaces for young professionals.',
+    rating: 4.3,
+    verified: false,
+    totalListings: 4,
+  },
+  {
+    id: 'u7',
+    name: 'Ritu Agarwal',
+    email: 'ritu@example.com',
+    avatar: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg',
+    role: 'owner',
+    status: 'active',
+    phone: '+91 43210 98765',
+    location: 'Delhi',
+    joinedDate: '2025-12-10',
+    bio: 'Heritage property owner in Central Delhi. Passionate about preserving old architecture.',
+    rating: 4.7,
+    verified: true,
+    totalListings: 1,
+  },
+  {
+    id: 'u8',
+    name: 'Admin User',
+    email: 'admin@airentfinder.com',
+    avatar: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg',
+    role: 'admin',
+    status: 'active',
+    phone: '+91 00000 00000',
+    location: 'Delhi',
+    joinedDate: '2025-01-01',
+    bio: 'Platform administrator.',
+    verified: true,
+  },
+  {
+    id: 'u9',
+    name: 'Neha Patel',
+    email: 'neha@example.com',
+    avatar: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg',
+    role: 'tenant',
+    status: 'active',
+    phone: '+91 91234 56789',
+    location: 'Pune',
+    joinedDate: '2026-04-20',
+    bio: 'MBA student looking for quiet accommodation near business hubs.',
+    verified: true,
+    preferences: ['WiFi', 'Quiet Area', 'Study Friendly', 'Near Metro', 'Non Smoking'],
+    totalRequests: 2,
+  },
+  {
+    id: 'u10',
+    name: 'Vivek Nair',
+    email: 'vivek@example.com',
+    avatar: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg',
+    role: 'tenant',
+    status: 'pending',
+    phone: '+91 82345 67890',
+    location: 'Hyderabad',
+    joinedDate: '2026-06-01',
+    bio: 'Data scientist. Love cooking, cycling, and co-working spaces.',
+    verified: false,
+    preferences: ['WiFi', 'Kitchen', 'Balcony', 'Near Metro', 'Pet Friendly'],
+    totalRequests: 1,
+  },
+];
